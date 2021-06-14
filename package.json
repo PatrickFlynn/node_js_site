@@ -1,0 +1,23 @@
+{
+  "name": "node_js_site",
+  "version": "1.0.0",
+  "description": "Node JS and Express site for TeamTreeHouse.com",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PatrickFlynn/node_js_site.git"
+  },
+  "author": "Patrick S. Flynn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PatrickFlynn/node_js_site/issues"
+  },
+  "homepage": "https://github.com/PatrickFlynn/node_js_site#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.2"
+  }
+}

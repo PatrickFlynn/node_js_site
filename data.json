@@ -1,0 +1,50 @@
+{
+	"projects": [
+		{
+		"id":0,
+		"project_name":"Random Quote Generator",
+		"description":"This project will randomly select a quote and display it to the user",
+		"technologies":["HTML", "CSS", "JavaScript"],
+		"live_link":"https://patrickflynn.github.io/Treehouse_Project_01/",
+		"github_link":"https://github.com/PatrickFlynn/Treehouse_Project_01",
+		"image_urls":["/static/images/project_01_01.PNG", "/static/images/project_01_02.PNG"]
+		},
+		{
+		"id":1,
+		"project_name":"Data Pagination",
+		"description":"Creating paginated pages for students",
+		"technologies":["HTML", "CSS", "JavaScript"],
+		"live_link":"https://patrickflynn.github.io/Data-Pagination/",
+		"github_link":"https://github.com/PatrickFlynn/Data-Pagination",
+		"image_urls":["/static/images/project_02_01.PNG", "/static/images/project_02_02.PNG"]
+		},
+		{
+		"id":2,
+		"project_name":"Interactive Conference Form",
+		"description":"Conference registration form with user input validation",
+		"technologies":["HTML", "CSS", "JavaScript"],
+		"live_link":"https://patrickflynn.github.io/Interactive-Form/",
+		"github_link":"https://github.com/PatrickFlynn/Interactive-Form",
+		"image_urls":["/static/images/project_03_01.PNG", "/static/images/project_03_02.PNG"]
+		},
+		{
+		"id":3,
+		"project_name":"Marvel Character Guessing Game",
+		"description":"A Hangman-style game where users guess Marvel characters",
+		"technologies":["HTML", "CSS", "JavaScript"],
+		"live_link":"https://patrickflynn.github.io/Game_Show_App/",
+		"github_link":"https://github.com/PatrickFlynn/Game_Show_App",
+		"image_urls":["/static/images/project_04_01.PNG", "/static/images/project_04_02.PNG", "/static/images/project_04_03.PNG"]
+		},
+		{
+		"id":4,
+		"project_name":"Public API Data Retrieval",
+		"description":"A page that pulls from the RandomUser.me API",
+		"technologies":["HTML", "CSS", "JavaScript", "AJAX"],
+		"live_link":"https://patrickflynn.github.io/public_api_request/",
+		"github_link":"https://github.com/PatrickFlynn/public_api_request",
+		"image_urls":["/static/images/project_05_01.PNG", "/static/images/project_05_02.PNG"]
+		}
+	]
+}
+	
