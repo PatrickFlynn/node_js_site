@@ -2,6 +2,16 @@
 const express = require('express');
 const app = express();
 const data = require('./data.json');
+var createError = require('http-errors');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
+const data = require('./data.json');
+
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 
 app.set('view engine', 'pug');
 app.use('/static', express.static('public'));
@@ -21,23 +31,20 @@ app.get('/project/:projectid', (req, res) => {
 	res.render('project', {data, projectid: req.params.projectid});
 })
 
-//Custom 404 error handling
-app.use(function (req, res, next) {
-	err = new Error('404 Error!')
-    err.status = 404;
-    err.message = "That page does not exist!"
-    console.log(`Error ${err.status} - ${err.message}! `)
-    res.render('error', {err});
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
 });
 
-// error handler middleware
-app.use((error, req, res, next) => {
- console.log('There was an internal server error!')
- console.error(error.stack);
- res.status(500).send('Internal Server Error! Please Contact the webmaster!');
-})
+// error handler
+app.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-//default port for testing is 3000
-app.listen(3000, () => {
-	console.log('Express listening on localhost port 3000!');
-})
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
+});
+
+module.exports = app;
