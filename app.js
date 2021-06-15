@@ -32,7 +32,7 @@ app.get('/project/:projectid', (req, res) => {
 
 app.get('/favico.ico', (req, res) => {
 
-	    res.sendFile("/favicon.ico");
+	    res.sendFile("/static/favicon.ico");
 
 });
 
