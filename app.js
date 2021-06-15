@@ -6,7 +6,6 @@ var createError = require('http-errors');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const data = require('./data.json');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -44,7 +43,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.send('error');
 });
 
 module.exports = app;
