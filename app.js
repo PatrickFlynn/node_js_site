@@ -30,6 +30,12 @@ app.get('/project/:projectid', (req, res) => {
 	res.render('project', {data, projectid: req.params.projectid});
 })
 
+app.get('/favico.ico', (req, res) => {
+
+	    res.sendFile("/favicon.ico");
+
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
